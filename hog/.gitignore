@@ -1,0 +1,7 @@
+.ok_*
+okgit 
+__pycache__/
+ok
+*.ok
+.vscode
+tests/

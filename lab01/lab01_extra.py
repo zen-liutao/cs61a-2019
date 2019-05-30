@@ -36,21 +36,18 @@ def double_eights(n):
     >>> double_eights(80808080)
     False
     """
-    while n:
-        remainder = n % 100
-        if remainder % 88 == 0:
-            return True
-        n = n // 10
-    return False
+    # while n:
+    #     remainder = n % 100
+    #     if remainder % 88 == 0:
+    #         return True
+    #     n = n // 10
+    # return False
 
+  
     while n:
         last_digit = n % 10
-        if last_digit == 8 and last_digit_is_eight:
-            last_digit_is_eight = True
+        last_but_one_digit = n % 100 // 10
+        if last_digit == 8 and last_but_one_digit == 8:
+           return True
         n = n // 10
-        last_but_one_digit = n % 10
-        if last_but_one_digit == 8:
-            return True
-        else:
-            last_digit = False
     return False
